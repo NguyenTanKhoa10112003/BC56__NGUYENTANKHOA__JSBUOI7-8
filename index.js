@@ -67,5 +67,26 @@ function doiCho() {
   var giaTriTam = arrNumber[soThuNhat];
   arrNumber[soThuNhat] = arrNumber[soThuHai];
   arrNumber[soThuHai] = giaTriTam;
-  document.getElementById("ketQua6").innerHTML = `<p>${arrNumber}</p>`
+  document.getElementById("ketQua6").innerHTML = `<p>${arrNumber}</p>`;
+}
+// Bài 10
+function soSanhSoAmSoDuong() {
+  var demSoDuong = 0;
+  var demSoAm = 0;
+  for (var index = 0; index < arrNumber.length; index++) {
+    if (arrNumber[index] > 0) {
+      demSoDuong += 1;
+    } else {
+      demSoAm += 1;
+    }
+  }
+  if (demSoDuong > demSoAm) {
+    document.getElementById(
+      "ketQua10"
+    ).innerHTML = `<p>Số dương nhiều hơn số âm</p>`;
+  } else {
+    document.getElementById(
+      "ketQua10"
+    ).innerHTML = `<p>Số âm nhiều hơn số dương</p>`;
+  }
 }
